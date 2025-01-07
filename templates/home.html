@@ -9,6 +9,12 @@
     <link rel="stylesheet" href="{% static "style.css" %}" type="text/css" >
 </head>
 <body>
-    <h1>Hello World</h1>
+    {% if can_display_name == True %}
+        {% for name in name %}
+          <h1>Welcome {{name}} to Nimcity </h1>
+        {% endfor %}
+        
+    {%endif%}
+   
 </body>
 </html>
